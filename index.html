@@ -39,7 +39,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── BACKGROUND ── */
 body::before {
   content: '';
   position: fixed;
@@ -51,7 +50,6 @@ body::before {
   z-index: 0;
 }
 
-/* ── NAV ── */
 nav {
   position: sticky; top: 0; z-index: 100;
   background: rgba(11,15,26,0.85);
@@ -62,9 +60,7 @@ nav {
   height: 64px;
 }
 
-.nav-brand {
-  display: flex; align-items: center; gap: 12px;
-}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
 .nav-brand .logo-icon {
   width: 36px; height: 36px;
   background: linear-gradient(135deg, var(--accent), var(--accent3));
@@ -80,10 +76,7 @@ nav {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
-.nav-tabs {
-  display: flex; gap: 4px; align-items: center;
-}
-
+.nav-tabs { display: flex; gap: 4px; align-items: center; }
 .nav-tabs button {
   background: transparent;
   border: none;
@@ -103,18 +96,9 @@ nav {
   border: 1px solid var(--border);
 }
 
-/* ── CLOCK WIDGET ── */
-#clock-wrap {
-  display: flex; align-items: center; gap: 12px;
-}
-#clock {
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-}
+#clock-wrap { display: flex; align-items: center; gap: 12px; }
+#clock { width: 48px; height: 48px; border-radius: 50%; background: var(--surface2); border: 1px solid var(--border); }
 
-/* ── SECTIONS ── */
 section {
   display: none;
   padding: 40px 32px;
@@ -129,7 +113,6 @@ section.active { display: block; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── CARDS / SURFACES ── */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -147,7 +130,6 @@ section.active { display: block; }
   display: flex; align-items: center; gap: 8px;
 }
 
-/* ── AUTH PAGES ── */
 .auth-wrap {
   min-height: calc(100vh - 64px);
   display: flex; align-items: center; justify-content: center;
@@ -165,12 +147,8 @@ section.active { display: block; }
   font-size: 1.6rem; font-weight: 800;
   margin-bottom: 8px;
 }
-.auth-box p {
-  color: var(--text-muted); font-size: 0.9rem;
-  margin-bottom: 28px;
-}
+.auth-box p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 28px; }
 
-/* ── FORM ELEMENTS ── */
 .field { margin-bottom: 18px; }
 .field label {
   display: block;
@@ -194,7 +172,6 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
 }
 select option { background: var(--surface2); }
-
 input[type="file"] { padding: 9px 12px; cursor: pointer; }
 input[type="file"]::file-selector-button {
   background: var(--surface);
@@ -211,7 +188,6 @@ input[type="file"]::file-selector-button:hover {
   background: var(--accent); color: white; border-color: var(--accent);
 }
 
-/* ── BUTTONS ── */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 11px 24px;
@@ -226,23 +202,12 @@ input[type="file"]::file-selector-button:hover {
   color: white;
   box-shadow: 0 4px 20px rgba(59,130,246,0.3);
 }
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 28px rgba(59,130,246,0.45);
-}
-.btn-secondary {
-  background: var(--surface2);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(59,130,246,0.45); }
+.btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
 .btn-secondary:hover { background: var(--border); }
-
-.btn-sm {
-  padding: 6px 14px; font-size: 0.8rem; border-radius: 6px;
-}
+.btn-sm { padding: 6px 14px; font-size: 0.8rem; border-radius: 6px; }
 .btn-full { width: 100%; justify-content: center; }
 
-/* ── BADGE / STATUS ── */
 .badge {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 11px;
@@ -252,8 +217,7 @@ input[type="file"]::file-selector-button:hover {
 }
 .badge::before {
   content: ''; width: 6px; height: 6px;
-  border-radius: 50%;
-  display: inline-block;
+  border-radius: 50%; display: inline-block;
 }
 .badge-ns { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
 .badge-ns::before { background: #ef4444; }
@@ -262,7 +226,6 @@ input[type="file"]::file-selector-button:hover {
 .badge-c  { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.25); }
 .badge-c::before  { background: #10b981; }
 
-/* ── STAT CARDS ── */
 .stats-row {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   margin-bottom: 24px;
@@ -279,20 +242,9 @@ input[type="file"]::file-selector-button:hover {
 .stat-value.yellow { color: var(--warning); }
 .stat-value.green { color: var(--success); }
 
-/* ── TABLE ── */
-.table-wrap {
-  overflow-x: auto;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-}
-table {
-  width: 100%; border-collapse: collapse;
-  font-size: 0.875rem;
-}
-thead tr {
-  background: var(--surface2);
-  border-bottom: 1px solid var(--border);
-}
+.table-wrap { overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+thead tr { background: var(--surface2); border-bottom: 1px solid var(--border); }
 th {
   padding: 12px 16px;
   text-align: left;
@@ -300,28 +252,15 @@ th {
   font-weight: 700; letter-spacing: 0.06em;
   color: var(--text-dim); text-transform: uppercase;
 }
-td {
-  padding: 13px 16px;
-  border-bottom: 1px solid rgba(30,45,71,0.5);
-  vertical-align: middle;
-}
+td { padding: 13px 16px; border-bottom: 1px solid rgba(30,45,71,0.5); vertical-align: middle; }
 tbody tr:hover { background: rgba(59,130,246,0.04); }
 tbody tr:last-child td { border-bottom: none; }
-
 table img { width: 72px; height: 56px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
-
-table select {
-  padding: 6px 10px; font-size: 0.8rem;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 6px; color: var(--text);
-  cursor: pointer;
-}
+table select { padding: 6px 10px; font-size: 0.8rem; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); cursor: pointer; }
 table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
 
-/* ── COMPLAINT FORM ── */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-/* ── USER COMPLAINT LIST ── */
 .complaint-item {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 18px;
@@ -334,7 +273,6 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
 .complaint-item:hover { border-color: var(--accent); }
 .complaint-meta { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
 
-/* ── CHARTS ── */
 .charts-grid {
   display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px;
   margin-top: 24px;
@@ -347,10 +285,7 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
 }
 .chart-box canvas { max-height: 280px; }
 
-/* ── WORK GALLERY ── */
-.gallery-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
-}
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .work-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -370,7 +305,6 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
 .work-card-body h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
 .work-card-body p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px; }
 
-/* ── REVIEW ── */
 .review-input-row { display: flex; gap: 12px; margin-bottom: 20px; }
 .review-input-row input { flex: 1; }
 .review-item {
@@ -390,18 +324,14 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
 .review-text { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
 .review-time { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
 
-/* ── MAP ── */
-#map { height: 480px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+/* MAP FIX: ensure the map div has explicit dimensions and renders after tab is shown */
+#map-container { height: 480px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+#map { width: 100%; height: 100%; }
 
-/* ── PAGE HEADER ── */
 .page-header { margin-bottom: 28px; }
-.page-header h2 {
-  font-family: 'Syne', sans-serif; font-size: 1.7rem; font-weight: 800;
-  margin-bottom: 4px;
-}
+.page-header h2 { font-family: 'Syne', sans-serif; font-size: 1.7rem; font-weight: 800; margin-bottom: 4px; }
 .page-header p { color: var(--text-muted); font-size: 0.9rem; }
 
-/* ── FILTER PILLS ── */
 .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
 .pill {
   padding: 6px 16px; border-radius: 20px;
@@ -415,20 +345,14 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
   color: var(--accent);
 }
 
-/* ── EMPTY STATE ── */
-.empty-state {
-  text-align: center; padding: 40px;
-  color: var(--text-muted); font-size: 0.9rem;
-}
+.empty-state { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; }
 .empty-state .icon { font-size: 2.5rem; margin-bottom: 10px; opacity: 0.4; }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* ── TOAST ── */
 #toast {
   position: fixed; bottom: 28px; right: 28px; z-index: 9999;
   background: var(--surface2); border: 1px solid var(--border);
@@ -439,16 +363,13 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
   pointer-events: none;
 }
 #toast.show { transform: translateY(0); opacity: 1; }
-
-/* ── SECTION SPECIFIC ── */
-#userLogin .auth-wrap, #adminLogin .auth-wrap { min-height: calc(100vh - 64px); }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-brand">
-    <div class="logo-icon">🏙️</div>
+    <div class="logo-icon"> </div>
     <h1>SmartCity Portal</h1>
   </div>
   <div class="nav-tabs">
@@ -456,7 +377,7 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
     <button onclick="show('adminLogin')" id="tab-adminLogin">🛡️ Admin</button>
     <button onclick="show('review')" id="tab-review">⭐ Reviews</button>
     <button onclick="show('work')" id="tab-work">🏗️ Projects</button>
-    <button onclick="show('mapTab'); loadMap()" id="tab-mapTab">🗺️ Map</button>
+    <button onclick="showMap()" id="tab-mapTab">🗺️ Map</button>
   </div>
   <div id="clock-wrap">
     <canvas id="clock" width="48" height="48"></canvas>
@@ -502,7 +423,13 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
           <option>Street Light</option>
           <option>Pothole</option>
           <option>Electricity</option>
-          <option>Water</option>
+          <option>Water Supply</option>
+          <option>Sewage / Drainage</option>
+          <option>Garbage Collection</option>
+          <option>Road Damage</option>
+          <option>Public Park</option>
+          <option>Stray Animals</option>
+          <option>Noise Pollution</option>
         </select>
       </div>
       <div class="field">
@@ -512,6 +439,14 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
           <option>Delhi</option>
           <option>Chennai</option>
           <option>Bangalore</option>
+          <option>Hyderabad</option>
+          <option>Kolkata</option>
+          <option>Ahmedabad</option>
+          <option>Pune</option>
+          <option>Jaipur</option>
+          <option>Lucknow</option>
+          <option>Surat</option>
+          <option>Bhopal</option>
         </select>
       </div>
     </div>
@@ -573,14 +508,20 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
   </div>
 
   <div class="card" style="margin-top:24px">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:gap">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
       <div class="card-title" style="margin-bottom:0">All Complaints</div>
       <div class="filter-pills" id="filterPills">
         <span class="pill active-pill" onclick="setFilter('all',this)">All</span>
         <span class="pill" onclick="setFilter('Street Light',this)">💡 Street Light</span>
         <span class="pill" onclick="setFilter('Pothole',this)">🕳️ Pothole</span>
         <span class="pill" onclick="setFilter('Electricity',this)">⚡ Electricity</span>
-        <span class="pill" onclick="setFilter('Water',this)">💧 Water</span>
+        <span class="pill" onclick="setFilter('Water Supply',this)">💧 Water</span>
+        <span class="pill" onclick="setFilter('Sewage / Drainage',this)">🚰 Sewage</span>
+        <span class="pill" onclick="setFilter('Garbage Collection',this)">🗑️ Garbage</span>
+        <span class="pill" onclick="setFilter('Road Damage',this)">🛣️ Road</span>
+        <span class="pill" onclick="setFilter('Public Park',this)">🌳 Park</span>
+        <span class="pill" onclick="setFilter('Stray Animals',this)">🐕 Stray Animals</span>
+        <span class="pill" onclick="setFilter('Noise Pollution',this)">🔊 Noise</span>
       </div>
     </div>
     <div class="table-wrap">
@@ -628,8 +569,10 @@ table input[type="file"] { padding: 4px 8px; font-size: 0.78rem; width: auto; }
     <h2>India Complaints Map</h2>
     <p>Live locations of reported civic issues</p>
   </div>
-  <div class="card" style="padding:0;overflow:hidden">
-    <div id="map"></div>
+  <div class="card" style="padding:16px">
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
   </div>
 </section>
 
@@ -639,7 +582,7 @@ let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 let currentUser = "";
 let filter = "all";
 let barChart = null, pieChart = null;
-let mapInitialized = false;
+let leafletMap = null;
 
 /* ── TOAST ── */
 function toast(msg, type="info") {
@@ -664,6 +607,120 @@ function show(id) {
   document.querySelectorAll(".nav-tabs button").forEach(b => b.classList.remove("tab-active"));
   const btn = document.getElementById("tab-" + id);
   if (btn) btn.classList.add("tab-active");
+}
+
+/* ── MAP: separate function to handle tab switch + map init properly ── */
+function showMap() {
+  show('mapTab');
+  // Wait for section to be visible in DOM, then init or refresh map
+  setTimeout(() => {
+    if (!leafletMap) {
+      initMap();
+    } else {
+      // Invalidate size in case the container was hidden when map first rendered
+      leafletMap.invalidateSize();
+      refreshMapMarkers();
+    }
+  }, 100);
+}
+
+function initMap() {
+  const mapEl = document.getElementById('map');
+  if (!mapEl) return;
+
+  leafletMap = L.map('map', { zoomControl: true }).setView([20.5937, 78.9629], 5);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 18
+  }).addTo(leafletMap);
+
+  // Force size recalculation after tiles load
+  leafletMap.whenReady(() => {
+    leafletMap.invalidateSize();
+  });
+
+  refreshMapMarkers();
+}
+
+/* ── CITY COORDINATES (all 12 cities) ── */
+const cityCoords = {
+  Mumbai:    [19.0760, 72.8777],
+  Delhi:     [28.7041, 77.1025],
+  Chennai:   [13.0827, 80.2707],
+  Bangalore: [12.9716, 77.5946],
+  Hyderabad: [17.3850, 78.4867],
+  Kolkata:   [22.5726, 88.3639],
+  Ahmedabad: [23.0225, 72.5714],
+  Pune:      [18.5204, 73.8567],
+  Jaipur:    [26.9124, 75.7873],
+  Lucknow:   [26.8467, 80.9462],
+  Surat:     [21.1702, 72.8311],
+  Bhopal:    [23.2599, 77.4126]
+};
+
+const statusColors = {
+  "Not Started": "#ef4444",
+  "In Progress":  "#f59e0b",
+  "Completed":    "#10b981"
+};
+
+/* Issue type icons for popup */
+const typeIcons = {
+  "Street Light":      "💡",
+  "Pothole":           "🕳️",
+  "Electricity":       "⚡",
+  "Water Supply":      "💧",
+  "Sewage / Drainage": "🚰",
+  "Garbage Collection":"🗑️",
+  "Road Damage":       "🛣️",
+  "Public Park":       "🌳",
+  "Stray Animals":     "🐕",
+  "Noise Pollution":   "🔊"
+};
+
+function refreshMapMarkers() {
+  if (!leafletMap) return;
+
+  // Remove existing layers (markers only)
+  leafletMap.eachLayer(layer => {
+    if (layer instanceof L.CircleMarker) {
+      leafletMap.removeLayer(layer);
+    }
+  });
+
+  if (!complaints.length) {
+    return;
+  }
+
+  complaints.forEach(c => {
+    const coords = cityCoords[c.city];
+    if (!coords) return;
+
+    // Add slight jitter to avoid stacking markers on the same city
+    const jitter = () => (Math.random() - 0.5) * 0.15;
+    const pos = [coords[0] + jitter(), coords[1] + jitter()];
+
+    const marker = L.circleMarker(pos, {
+      radius: 10,
+      fillColor: statusColors[c.status] || '#3b82f6',
+      color: '#ffffff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.85
+    }).addTo(leafletMap);
+
+    const icon = typeIcons[c.type] || '📌';
+    marker.bindPopup(`
+      <div style="font-family:sans-serif;min-width:160px">
+        <div style="font-size:1.1rem;margin-bottom:4px">${icon} <strong>${c.type}</strong></div>
+        <div style="color:#555;font-size:0.85rem">📍 ${c.city}</div>
+        <div style="color:#555;font-size:0.85rem">👤 ${c.user}</div>
+        <div style="margin-top:6px;font-size:0.82rem;font-weight:600;color:${statusColors[c.status] || '#3b82f6'}">${c.status}</div>
+        <div style="color:#999;font-size:0.75rem;margin-top:2px">${c.date}</div>
+      </div>
+    `);
+  });
 }
 
 /* ── USER ── */
@@ -695,6 +752,8 @@ function addComplaint() {
     renderUser();
     document.getElementById("before").value = "";
     toast("Complaint submitted successfully!", "success");
+    // Refresh map markers if map is already initialized
+    if (leafletMap) refreshMapMarkers();
   };
   reader.readAsDataURL(file);
 }
@@ -709,7 +768,7 @@ function renderUser() {
   list.innerHTML = mine.map(c => `
     <li class="complaint-item">
       <div>
-        <div style="font-weight:500;font-size:0.9rem">${c.type}</div>
+        <div style="font-weight:500;font-size:0.9rem">${typeIcons[c.type] || ''} ${c.type}</div>
         <div class="complaint-meta">${c.city} · ${c.date}</div>
       </div>
       <span class="badge ${statusClass(c.status)}">${c.status}</span>
@@ -742,12 +801,12 @@ function renderAdmin() {
     return;
   }
 
-  document.getElementById("adminTable").innerHTML = filtered.map((c, ri) => {
+  document.getElementById("adminTable").innerHTML = filtered.map((c) => {
     const i = complaints.indexOf(c);
     return `
     <tr>
       <td style="font-weight:500">${c.user}</td>
-      <td><span style="background:var(--surface2);padding:4px 10px;border-radius:6px;font-size:0.8rem">${c.type}</span></td>
+      <td><span style="background:var(--surface2);padding:4px 10px;border-radius:6px;font-size:0.8rem">${typeIcons[c.type] || ''} ${c.type}</span></td>
       <td style="color:var(--text-dim)">${c.city}</td>
       <td style="color:var(--text-muted);font-size:0.8rem">${c.date}</td>
       <td>${c.before ? `<img src="${c.before}">` : '—'}</td>
@@ -804,6 +863,7 @@ function updateStatus(i, val) {
   complaints[i].status = val;
   save();
   renderAdmin();
+  if (leafletMap) refreshMapMarkers();
   toast("Status updated to: " + val, "success");
 }
 
@@ -831,14 +891,22 @@ function renderCharts() {
   if (barChart) barChart.destroy();
   if (pieChart) pieChart.destroy();
 
+  const bgColors = [
+    'rgba(59,130,246,0.7)','rgba(139,92,246,0.7)','rgba(6,182,212,0.7)',
+    'rgba(16,185,129,0.7)','rgba(245,158,11,0.7)','rgba(239,68,68,0.7)',
+    'rgba(236,72,153,0.7)','rgba(34,197,94,0.7)','rgba(251,191,36,0.7)',
+    'rgba(99,102,241,0.7)'
+  ];
+  const bdColors = ['#3b82f6','#8b5cf6','#06b6d4','#10b981','#f59e0b','#ef4444','#ec4899','#22c55e','#fbbf24','#6366f1'];
+
   barChart = new Chart(barCtx, {
     type: 'bar',
     data: {
       labels: Object.keys(types),
       datasets: [{
         data: Object.values(types),
-        backgroundColor: ['rgba(59,130,246,0.7)', 'rgba(139,92,246,0.7)', 'rgba(6,182,212,0.7)', 'rgba(16,185,129,0.7)'],
-        borderColor: ['#3b82f6','#8b5cf6','#06b6d4','#10b981'],
+        backgroundColor: bgColors.slice(0, Object.keys(types).length),
+        borderColor: bdColors.slice(0, Object.keys(types).length),
         borderWidth: 2,
         borderRadius: 8,
       }]
@@ -847,7 +915,7 @@ function renderCharts() {
       responsive: true,
       plugins: { legend: { display: false } },
       scales: {
-        x: { grid: { color: 'rgba(30,45,71,0.5)' }, ticks: { font: { family: 'DM Sans', size: 12 } } },
+        x: { grid: { color: 'rgba(30,45,71,0.5)' }, ticks: { font: { family: 'DM Sans', size: 11 } } },
         y: { grid: { color: 'rgba(30,45,71,0.5)' }, ticks: { stepSize: 1, font: { family: 'DM Sans', size: 12 } } }
       }
     }
@@ -859,7 +927,7 @@ function renderCharts() {
       labels: Object.keys(status),
       datasets: [{
         data: Object.values(status),
-        backgroundColor: ['rgba(16,185,129,0.8)', 'rgba(245,158,11,0.8)', 'rgba(239,68,68,0.8)'],
+        backgroundColor: ['rgba(16,185,129,0.8)','rgba(245,158,11,0.8)','rgba(239,68,68,0.8)'],
         borderColor: ['#10b981','#f59e0b','#ef4444'],
         borderWidth: 2,
       }]
@@ -892,7 +960,7 @@ function renderWork() {
         ${c.after ? `<img src="${c.after}" alt="After">` : '<div class="img-placeholder">No After</div>'}
       </div>
       <div class="work-card-body">
-        <h4>${c.type}</h4>
+        <h4>${typeIcons[c.type] || ''} ${c.type}</h4>
         <p>${c.city} · ${c.date}</p>
         <span class="badge ${statusClass(c.status)}">${c.status}</span>
       </div>
@@ -934,43 +1002,6 @@ function renderReviews() {
 }
 renderReviews();
 
-/* ── MAP ── */
-function loadMap() {
-  if (mapInitialized) return;
-  const map = L.map('map').setView([20.5937, 78.9629], 5);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-  const coords = {
-    Mumbai: [19.0760, 72.8777],
-    Delhi: [28.7041, 77.1025],
-    Chennai: [13.0827, 80.2707],
-    Bangalore: [12.9716, 77.5946]
-  };
-
-  const colors = {
-    "Not Started": "#ef4444",
-    "In Progress": "#f59e0b",
-    "Completed": "#10b981"
-  };
-
-  complaints.forEach(c => {
-    if (coords[c.city]) {
-      const dot = L.circleMarker(coords[c.city], {
-        radius: 10, fillColor: colors[c.status] || '#3b82f6',
-        color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.85
-      }).addTo(map);
-      dot.bindPopup(`
-        <b>${c.type}</b><br>
-        <span style="color:#64748b">${c.city}</span><br>
-        <span style="color:${colors[c.status]}">${c.status}</span>
-      `);
-    }
-  });
-  mapInitialized = true;
-}
-
 /* ── HELPERS ── */
 function statusClass(s) {
   return s === "Completed" ? "badge-c" : s === "In Progress" ? "badge-ip" : "badge-ns";
@@ -978,36 +1009,33 @@ function statusClass(s) {
 
 /* ── CLOCK ── */
 const clockCanvas = document.getElementById("clock");
-const ctx = clockCanvas.getContext("2d");
-const size = 48;
-const cx = size / 2, cy = size / 2, r = size / 2 - 3;
+const ctx2d = clockCanvas.getContext("2d");
+const size = 48, cx = size / 2, cy = size / 2, r = size / 2 - 3;
 
 function drawClock() {
-  ctx.clearRect(0, 0, size, size);
-
-  // Face
-  ctx.beginPath(); ctx.arc(cx, cy, r, 0, 2 * Math.PI);
-  ctx.fillStyle = "#1a2236"; ctx.fill();
-  ctx.strokeStyle = "#1e2d47"; ctx.lineWidth = 1.5; ctx.stroke();
+  ctx2d.clearRect(0, 0, size, size);
+  ctx2d.beginPath(); ctx2d.arc(cx, cy, r, 0, 2 * Math.PI);
+  ctx2d.fillStyle = "#1a2236"; ctx2d.fill();
+  ctx2d.strokeStyle = "#1e2d47"; ctx2d.lineWidth = 1.5; ctx2d.stroke();
 
   const now = new Date();
   const hr = now.getHours() % 12, min = now.getMinutes(), sec = now.getSeconds();
 
   const hand = (angle, length, width, color) => {
-    ctx.save();
-    ctx.translate(cx, cy); ctx.rotate(angle - Math.PI / 2);
-    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(length, 0);
-    ctx.strokeStyle = color; ctx.lineWidth = width;
-    ctx.lineCap = "round"; ctx.stroke();
-    ctx.restore();
+    ctx2d.save();
+    ctx2d.translate(cx, cy); ctx2d.rotate(angle - Math.PI / 2);
+    ctx2d.beginPath(); ctx2d.moveTo(0, 0); ctx2d.lineTo(length, 0);
+    ctx2d.strokeStyle = color; ctx2d.lineWidth = width;
+    ctx2d.lineCap = "round"; ctx2d.stroke();
+    ctx2d.restore();
   };
 
   hand((hr / 12 + min / 720) * 2 * Math.PI, r * 0.45, 2.5, "#e2e8f0");
   hand((min / 60 + sec / 3600) * 2 * Math.PI, r * 0.65, 1.5, "#94a3b8");
   hand((sec / 60) * 2 * Math.PI, r * 0.72, 1, "#3b82f6");
 
-  ctx.beginPath(); ctx.arc(cx, cy, 2.5, 0, 2 * Math.PI);
-  ctx.fillStyle = "#3b82f6"; ctx.fill();
+  ctx2d.beginPath(); ctx2d.arc(cx, cy, 2.5, 0, 2 * Math.PI);
+  ctx2d.fillStyle = "#3b82f6"; ctx2d.fill();
 }
 setInterval(drawClock, 1000);
 drawClock();
